@@ -53,7 +53,7 @@ class avelsieve_condition_datetime extends avelsieve_condition {
      * @return void
      */
     function __construct(&$s, $rule, $n, $test = 'currentdate') {
-        parent::__construct(&$s, $rule, $n);
+        parent::__construct($s, $rule, $n);
 
         if($test == 'currentdate') {
             $this->test = 'currentdate';

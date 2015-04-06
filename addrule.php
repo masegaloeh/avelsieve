@@ -125,7 +125,7 @@ if(isset($_POST['action']) && ($_POST['action'] == 5) &&
   (isset($_POST['newfolder']) && $_POST['newfolder'] == "5b" ) &&
   !isset($_POST['startover']) && !isset($_POST['cancel']) ) {
 
-	$errmsg = avelsieve_create_folder($_POST['folder_name'], $_POST['subfolder'], &$mailbox);
+	$errmsg = avelsieve_create_folder($_POST['folder_name'], $_POST['subfolder'], $mailbox);
 	if($errmsg) {
 		/* There was some error. Remain in the same page. */
 		$part--;
