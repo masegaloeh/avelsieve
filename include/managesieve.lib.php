@@ -438,7 +438,7 @@ class sieve {
     //response.  They repsond as follows: "Cyrus timsieved v1.0.0" "SASL={PLAIN,........}"
     //So, if we see IMPLEMENTATION in the first line, then we are done.
 
-    if(ereg("IMPLEMENTATION",$this->line))
+    if(preg_match("/IMPLEMENTATION/",$this->line))
     {
       //we're on the Cyrus V2 or Cyrus V3 sieve server
       while(sieve::status($this->line) == F_DATA){
