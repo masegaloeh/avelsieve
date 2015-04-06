@@ -120,7 +120,7 @@ if ($logout) {
             $s->delete('phpscript');
         } */
     }
-    session_unregister('rules');
+    unset($_SESSION['rules']);
     
     header("Location: $location/../../src/options.php\n\n");
     // header("Location: $location/../../src/options.php?optpage=avelsieve\n\n");
@@ -364,7 +364,7 @@ if($modifyEnable) {
 if (isset($_SESSION['returnnewrule'])) {
     /* There is a new rule to be added */
     $newrule = $_SESSION['returnnewrule'];
-    session_unregister('returnnewrule');
+    unset($_SESSION['returnnewrule']);
     $rules[] = $newrule;
     $haschanged = true;
 }

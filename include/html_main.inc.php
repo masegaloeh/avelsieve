@@ -225,7 +225,7 @@ class avelsieve_html {
      */
     function clear_avelsieve_messages() {
         if(isset($_SESSION['comm'])) {
-            session_unregister('comm');
+            unset($_SESSION['comm']);
         }
     }
     
