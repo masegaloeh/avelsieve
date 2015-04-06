@@ -181,7 +181,7 @@ function junkmail_markspecial($box) {
     if($box == 'Junk' || $box == 'INBOX.Junk') {
         return true;
     }
-    $parts = split(str_replace('.', '\.',$delimiter), $box);
+    $parts = explode(str_replace('.', '\.',$delimiter), $box);
     if(sizeof($parts) > 1 && ($parts[0] == 'Junk' || $parts[1] == 'Junk')) {
         return true;
     }
