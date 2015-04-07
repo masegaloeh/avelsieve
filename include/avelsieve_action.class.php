@@ -220,7 +220,7 @@ class avelsieve_action {
                             $out .= 'if(el(\'options_'.$i.'\')) { new Effect.BlindUp(\'options_'.$i.'\'); }
                                      if(el(\'helptxt_action_'.$i.'\')) { new Effect.Fade(\'helptxt_action_'.$i.'\'); } ';
                         } else {
-                            $out .= 'HideDiv(\'options_'.$i.'\'); HideDiv(\'helptxt_action_'.$i.'\');';
+                            $out .= 'AVELSIEVE.util.HideDiv(\'options_'.$i.'\'); AVELSIEVE.util.HideDiv(\'helptxt_action_'.$i.'\');';
                         }
                     }
                 }
@@ -228,7 +228,7 @@ class avelsieve_action {
                     $out .= 'if(el(\'options_'.$this->num.'\')) { new Effect.BlindDown(\'options_'.$this->num.'\'); }
                              if(el(\'helptxt_action_'.$this->num.'\')) { new Effect.Appear(\'helptxt_action_'.$this->num.'\'); }';
                 } else {
-                    $out .= 'ShowDiv(\'options_'.$this->num.'\'); ShowDiv(\'helptxt_action_'.$this->num.'\');';
+                    $out .= 'AVELSIEVE.util.ShowDiv(\'options_'.$this->num.'\'); AVELSIEVE.util.ShowDiv(\'helptxt_action_'.$this->num.'\');';
                 }
                 $out .= ' return true;"';
             }
