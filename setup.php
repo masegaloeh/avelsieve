@@ -153,7 +153,7 @@ function avelsieve_generic_header() {
 
     if(stristr(basename($PHP_SELF), 'edit.php')) {
         // Edit page (edit.php)
-        $js = array('avelsieve_common.js', 'avelsieve_edit.js', 'prototype-base-extensions.js', 'prototype-date-extensions.js', 'datepicker.js');
+        $js = array('avelsieve_common.js', 'avelsieve_edit.js', 'prototype-1.6.0.2.js', 'prototype-base-extensions.js', 'prototype-date-extensions.js', 'datepicker.js');
         echo "\n".'<link rel="stylesheet" type="text/css" href="'.$base_uri.'plugins/avelsieve/styles/datepicker.css"></link>' . "\n";
 
     } elseif(stristr(basename($PHP_SELF), 'table.php')) {
